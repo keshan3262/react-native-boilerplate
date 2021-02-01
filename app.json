@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "_internal": {
+      "isDebug": false,
+      "projectRoot": "/home/keshan/ReactNativeTutorial",
+      "dynamicConfigPath": null,
+      "staticConfigPath": null,
+      "packageJsonPath": "/home/keshan/ReactNativeTutorial/package.json"
+    },
+    "name": "ReactNativeTutorial",
+    "slug": "reactnativetutorial",
+    "version": "1.0.0",
+    "sdkVersion": "40.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "android": {
+      "package": "com.madfish.reactnativetutorial"
+    },
+    "ios": {
+      "bundleIdentifier": "com.madfish.reactnativetutorial"
+    }
+  }
+}

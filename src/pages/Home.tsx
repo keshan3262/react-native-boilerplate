@@ -4,6 +4,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import { Actions } from "react-native-router-flux";
 import tailwind from "tailwind-rn";
 import SignUpForm, { SignUpFormValues } from "layouts/SignUpForm";
+import LanguagePicker from "components/LanguagePicker";
 
 export default function Home() {
   const goToAbout = useCallback(() => {
@@ -16,6 +17,7 @@ export default function Home() {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
+      <LanguagePicker />
       <Text style={tailwind("text-xl")}>
         Open up App.tsx to start (or not) working on your app!
       </Text>

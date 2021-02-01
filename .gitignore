@@ -90,6 +90,7 @@ project.xcworkspace
 
 # Android/IntelliJ
 #
+android/*.hprof
 build/
 .idea
 .gradle

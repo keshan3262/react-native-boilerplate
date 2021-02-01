@@ -21,4 +21,6 @@ target 'ReactNativeTutorial' do
   #  post_install do |installer|
   #    flipper_post_install(installer)
   #  end
+  pod 'RNI18n', :path => '../node_modules/react-native-i18n'
+
 end

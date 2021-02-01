@@ -21,6 +21,11 @@
     },
     "ios": {
       "bundleIdentifier": "com.madfish.reactnativetutorial"
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#FEF9B0",
+      "resizeMode": "contain"
     }
   }
 }

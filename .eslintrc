@@ -1,0 +1,24 @@
+{
+	"parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react-hooks", "react", "react-native"],
+  "extends": ["plugin:react/recommended"],
+  "rules": {
+    "react/jsx-props-no-spreading": 0,
+    "react/prop-types": 0,
+    "react/display-name": 0,
+    "react-hooks/rules-of-hooks": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/require-default-props": 0,
+    "import/prefer-default-export": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+		"jsx-a11y/no-static-element-interactions": 0,
+		"react-native/no-unused-styles": 1,
+    "react-native/split-platform-components": 1,
+    "react-native/no-inline-styles": 1,
+    "react-native/no-raw-text": 2,
+    "react-native/no-single-element-style-arrays": 2
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}

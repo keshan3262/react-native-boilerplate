@@ -9,6 +9,20 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "paths": {
+      "components/*": [
+        "./src/components/*"
+      ],
+      "i18n/*": [
+        "./src/i18n/*"
+      ],
+      "pages/*": [
+        "./src/pages/*"
+      ],
+      "layouts/*": [
+        "./src/layouts/*"
+      ]
+    }
   }
 }

@@ -21,7 +21,7 @@ export type SignUpFormProps = {
 export default function SignUpForm(props: SignUpFormProps) {
   const { onSubmit } = props;
 
-  const { t, locale } = useI18n();
+  const { t } = useI18n();
   const signUpValidationSchema = useMemo(
     () =>
       Yup.object({
@@ -62,8 +62,6 @@ export default function SignUpForm(props: SignUpFormProps) {
   return (
     <View style={tailwind("w-full flex-row")}>
       <View style={tailwind("flex-1 flex items-start")}>
-        <Text>{locale}</Text>
-
         <CustomTextInput
           errorCaption={touched.email && errors.email}
           label={t("email")}

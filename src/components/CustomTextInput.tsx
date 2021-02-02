@@ -9,7 +9,7 @@ import {
   TextInputProps,
   View,
 } from "react-native";
-import tailwind from "tailwind-rn";
+import { tailwind } from "tailwind";
 
 type NarrowedStyle = Record<string, string | number>;
 
@@ -157,6 +157,9 @@ const CustomTextInput = React.forwardRef<TextInput, CustomTextInputProps>(
                 classNames(
                   "w-full py-3 pl-4",
                   extraInner ? "pr-20" : "pr-4",
+                  "border-2",
+                  errorCaption ? "border-red-500" : "border-gray-300",
+                  focused && "border-primary-orange",
                   "bg-gray-100 rounded-md text-gray-700 text-lg leading-5",
                   tailwindClassName
                 )

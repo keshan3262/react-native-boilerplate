@@ -11,6 +11,7 @@ module.exports = function (api) {
             i18n: "./src/i18n",
             pages: "./src/pages",
             layouts: "./src/layouts",
+            tailwind: "./src/tailwind.ts",
           },
         },
       ],

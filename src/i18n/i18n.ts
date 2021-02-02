@@ -14,8 +14,6 @@ I18n.translations = {
 
 export default I18n;
 
-const languagePromise = AsyncStorage.getItem("language");
-
 export const outputErrorMessage = (
   error: Error,
   i18nKey: string,
@@ -45,8 +43,10 @@ export const [I18nContextProvider, useI18n] = constate(() => {
     [locale]
   );
   useEffect(() => {
-    languagePromise
-      .then((localeFromStorage) => setLocaleState(localeFromStorage))
+    AsyncStorage.getItem("language")
+      .then((localeFromStorage) => {
+        setLocaleState(localeFromStorage);
+      })
       .catch((err) => {
         outputErrorMessage(err, "errorWhileLoadingLocale");
       })

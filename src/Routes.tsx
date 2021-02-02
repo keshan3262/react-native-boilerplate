@@ -1,7 +1,7 @@
 import * as SplashScreen from "expo-splash-screen";
 import React, { useEffect, useState } from "react";
-import { StyleSheet, View, Image } from "react-native";
-import { Router, Scene } from "react-native-router-flux";
+import { StyleSheet, View, Image, BackHandler } from "react-native";
+import { Actions, Reducer, Router, Scene } from "react-native-router-flux";
 import Home from "pages/Home";
 import About from "pages/About";
 import { useI18n } from "i18n/i18n";
@@ -30,7 +30,7 @@ export default function Routes() {
   }
 
   return (
-    <Router>
+    <Router createReducer={reducerCreate}>
       <Scene key="root">
         <Scene key="home" component={Home} title="Home" initial={true} />
         <Scene key="about" component={About} title="About" />
@@ -38,6 +38,17 @@ export default function Routes() {
     </Router>
   );
 }
+
+const reducerCreate = (params: any) => {
+  const defaultReducer = new Reducer(params);
+
+  return (state, action) => {
+    if (action.type === "Navigation/BACK" && state.index === 0) {
+      BackHandler.exitApp();
+    }
+    return defaultReducer(state, action);
+  };
+};
 
 const styles = StyleSheet.create({
   container: {
